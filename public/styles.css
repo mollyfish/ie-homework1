@@ -1,6 +1,18 @@
 h1 {
-color: red;
+animation-name: color_shift;
+animation-duration: 10s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
 font-family: Arial, sans-serif;
 font-size: 3em;
 }
+@keyframes color_shift {
+0% {color: red;}
+20% {color: orange;}
+40% {color: yellow;}
+60% {color: green;}
+80% {color: blue;}
+100% {color: purple;}
+}
+
 
