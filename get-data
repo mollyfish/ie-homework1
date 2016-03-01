@@ -1,0 +1,5 @@
+#!/bin/bash
+
+luajit memshow.lua > data.txt
+nodejs json-parser.js > public/data.js
+nodejs server.js

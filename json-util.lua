@@ -19,7 +19,7 @@ local function printValue(avalue, indent, name)
 
 	if type(avalue) == "table" then
 		if name then
-			print(string.format('%s"%s":{', indent, name))
+			print(string.format('{label: "%s",', name))
 		else
 			print(string.format('%s{', indent))
 		end
@@ -34,8 +34,10 @@ local function printValue(avalue, indent, name)
 			for key, value in pairs(avalue) do
 				if next(avalue, key) then
 					printValue(value, indent..'    ', key)
+					--print(string.format('value: "%s"', value))
 				else
-					print(string.format('	"%s":"%s"', key, value))
+					--print(string.format('value: "%s"', value))
+					printValue(value, indent..'    ', value)
 				end
 			end
 		end
