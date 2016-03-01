@@ -3,8 +3,11 @@
 var fs = require("fs");
 var data = ""; 
 data = fs.readFileSync("./data.txt").toString();
-//data = data.substr(1);
-data = data.slice(0, -2);
-data = "var pieData = [" + data + "];";
+data = data.substr(13);
+
+data = data.substr(0, data.indexOf('}'));
+
+//data = data.slice(0, -2);
+data = "var cpus = " + data + "};";
 console.log(data);
 })();

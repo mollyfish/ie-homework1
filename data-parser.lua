@@ -19,9 +19,9 @@ local function printValue(avalue, indent, name)
 
 	if type(avalue) == "table" then
 		if name then
-			print(string.format('{label: "%s",', name))
+			print(string.format('{"%s" : {', name))
 		else
-			print(string.format('%s{', indent))
+			print(string.format('%s', indent))
 		end
 
 		if #avalue > 0 then
@@ -32,20 +32,19 @@ local function printValue(avalue, indent, name)
 		else
 			-- assume it's a dictionary, so use pairs
 			for key, value in pairs(avalue) do
-				if next(avalue, key) then
-					printValue(value, indent..'    ', key)
-					--print(string.format('value: "%s"', value))
-				else
-					--print(string.format('value: "%s"', value))
-					printValue(value, indent..'    ', value)
-				end
+--				if next(avalue, key) then
+--					print(string.format('%s : %s,', key, value))
+printValue(value, indent..'    ', key)
+--				else
+					--print(string.format('%s : %s', key, value))
+--					printValue(value, key)
+--				end
 			end
 		end
-		
-			print(string.format('%s},', indent))
+		print(string.format('}'))
 	else 
 		if name then
-			print(string.format('%s"%s":"%s",', indent, name, literalForValue(avalue)))
+			print(string.format('%s"%s" : "%s",', indent, name, literalForValue(avalue)))
 		else
 			print(string.format('%s%s,', indent, literalForValue(avalue)))
 		end
@@ -55,6 +54,4 @@ end
 
 return {
 	printValue = printValue;
-
 }
-

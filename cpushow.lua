@@ -11,7 +11,7 @@
 
 local procfs = require("lj2procfs.procfs")
 --local jsonify = require("json-util")
-local parse = require("print2")
+local parse = require("data-parser")
 
 
 parse.printValue(procfs.stat)
