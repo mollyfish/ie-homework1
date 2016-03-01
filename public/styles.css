@@ -15,4 +15,7 @@ font-size: 3em;
 100% {color: purple;}
 }
 
-
+canvas {
+height: 100px;
+float: left;
+}

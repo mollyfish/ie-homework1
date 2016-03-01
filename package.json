@@ -4,7 +4,9 @@
   "description": "basic webpage server hosted on VM through Azure",
   "main": "server.js",
   "dependencies": {
-    "express": "~4.13.4"
+    "express": "~4.13.4",
+    "fs": "0.0.2",
+    "chart.js": "~1.0.2"
   },
   "devDependencies": {},
   "scripts": {
