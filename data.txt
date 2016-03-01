@@ -1,28 +1,28 @@
 
 {"allcpus" : {
-        "softirq" : "1694",
+        "softirq" : "1743",
         "guest_nice" : "0",
-        "user" : "98363",
+        "user" : "104802",
         "guest" : "0",
         "steal" : "0",
-        "system" : "40617",
+        "system" : "42325",
         "nice" : "13066",
         "irq" : "3",
-        "iowait" : "171488",
-        "idle" : "42379523",
-},
+        "iowait" : "177389",
+        "idle" : "43469075",
+}
 {"cpus" : {
         
-            "softirq" : "1694",
+            "softirq" : "1743",
             "guest_nice" : "0",
-            "user" : "98363",
+            "user" : "104802",
             "guest" : "0",
             "steal" : "0",
-            "system" : "40617",
+            "system" : "42325",
             "nice" : "13066",
             "irq" : "3",
-            "iowait" : "171488",
-            "idle" : "42379523",
-},
-},
-},
+            "iowait" : "177389",
+            "idle" : "43469075",
+}
+}
+}
