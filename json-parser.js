@@ -7,7 +7,6 @@ data = data.substr(13);
 
 data = data.substr(0, data.indexOf('}'));
 
-//data = data.slice(0, -2);
 data = "var cpus = " + data + "};";
 console.log(data);
 })();

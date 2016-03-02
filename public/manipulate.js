@@ -1,4 +1,4 @@
-var prevCpus =  {
+var prevCpus = {
         "softirq" : "2607",
         "guest_nice" : "0",
         "user" : "10411",
@@ -10,7 +10,6 @@ var prevCpus =  {
         "iowait" : "121714",
         "idle" : "21820846",
 };
-
 
 var prevSoftirq = parseInt(prevCpus.softirq);
 var prevGuest_nice = parseInt(prevCpus.guest_nice);
@@ -47,7 +46,9 @@ var totalDiff = total - prevTotal;
 var idleDiff = trueIdle - prevTrueIdle;
 
 var rawPercentage = (totalDiff - idleDiff) / totalDiff;
-var prettyPercentage = (rawPercentage*100).toFixed(3) + "%";
+var prettyPercentage = (rawPercentage*100);
+console.dir(prevCpus);
+console.dir(cpus);
 console.log(prettyPercentage);
 
 prevCpus = cpus;

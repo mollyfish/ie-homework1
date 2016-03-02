@@ -2,4 +2,3 @@
 
 luajit cpushow.lua > data.txt
 nodejs json-parser.js > public/data.js
-nodejs server.js
