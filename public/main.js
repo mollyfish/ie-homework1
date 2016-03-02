@@ -1,3 +1,5 @@
+$(function(){
+
 var percentages = [0.2669, 0.4763, 0.7827, 0.265, 0.236, 0.7745, 0.3326];
 //percentages.push(prettyPercentage);
 
@@ -27,15 +29,16 @@ var options = {
 
 var ctx = document.getElementById("myChart").getContext("2d");
 var myNewChart = new Chart(ctx).Line(data, options);
+
 setInterval(function(){
 
-$.get('/cpuinfo.html', function(data){
-  console.log(data);
-});
+  $.get('/cpuinfo.html', function(data){
+    console.log(data);
+  });
 
-
-  // Add two random numbers for each dataset
   myNewChart.addData([0.3422], "0");  
-// Remove the first point so we dont just add values forever
   myNewChart.removeData();
-}, 5000);
+
+}, 2000);
+
+});
