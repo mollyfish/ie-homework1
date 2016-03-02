@@ -1,7 +1,6 @@
-$(function(){
-
-var percentages = [0.2669, 0.4763, 0.7827, 0.265, 0.236, 0.7745, 0.3326];
-//percentages.push(prettyPercentage);
+var percentages = [0, 0, 0, 0, 0, 0, 0];
+percentages.push(prettyPercentage);
+percentages.shift();
 
 console.log(percentages);
 var data = {
@@ -30,15 +29,10 @@ var options = {
 var ctx = document.getElementById("myChart").getContext("2d");
 var myNewChart = new Chart(ctx).Line(data, options);
 
-setInterval(function(){
+//setInterval(function(){
 
-  $.get('/cpuinfo.html', function(data){
-    console.log(data);
-  });
 
-  myNewChart.addData([0.3422], "0");  
-  myNewChart.removeData();
+//  myNewChart.addData([0.3422], "0");  
+//  myNewChart.removeData();
 
-}, 2000);
-
-});
+//}, 2000);
