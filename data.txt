@@ -1,28 +1,28 @@
 
 {"allcpus" : {
-        "softirq" : "1812",
+        "softirq" : "2052",
         "guest_nice" : "0",
-        "user" : "110522",
+        "user" : "122575",
         "guest" : "0",
         "steal" : "0",
-        "system" : "43888",
-        "nice" : "13066",
-        "irq" : "3",
-        "iowait" : "181800",
-        "idle" : "44964662",
+        "system" : "48241",
+        "nice" : "14188",
+        "irq" : "4",
+        "iowait" : "193621",
+        "idle" : "51466457",
 }
 {"cpus" : {
         
-            "softirq" : "1812",
+            "softirq" : "2052",
             "guest_nice" : "0",
-            "user" : "110522",
+            "user" : "122575",
             "guest" : "0",
             "steal" : "0",
-            "system" : "43888",
-            "nice" : "13066",
-            "irq" : "3",
-            "iowait" : "181800",
-            "idle" : "44964662",
+            "system" : "48241",
+            "nice" : "14188",
+            "irq" : "4",
+            "iowait" : "193621",
+            "idle" : "51466457",
 }
 }
 }
