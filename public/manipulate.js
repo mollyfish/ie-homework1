@@ -42,7 +42,6 @@ setInterval(function() {
 
 $.get('/cpuinfo', function(newData) {
   cpus = JSON.parse(newData);
-  console.dir(cpus);
   console.dir(prevCpus);
   
 
@@ -87,7 +86,6 @@ var prettyPercentage = (rawPercentage*100);
 
 prevCpus = cpus;
 
-console.dir(cpus);
 console.dir(prevCpus);
 
 percentages.push(prettyPercentage);
