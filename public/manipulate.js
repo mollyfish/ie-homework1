@@ -92,7 +92,7 @@ console.log(percentages);
 
 
 // myNewChart.addData([prettyPercentage], "0"); 
-console.log(data); 
+console.log(data.datasets[0].data); 
 // myNewChart.removeData();
 
 });
