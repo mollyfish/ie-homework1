@@ -83,8 +83,8 @@ setInterval(function() {
 
     // console.log(prettyPercentage);
 
-    percentages.push(prettyPercentage);
-    percentages.shift();
+    // percentages.push(prettyPercentage);
+    // percentages.shift();
 
     // myNewChart.addData([percentages[6]], "0");
     // data.datasets[0].data = [percentages[0],percentages[1],percentages[2],percentages[3],percentages[4],percentages[5],percentages[6]]; 
