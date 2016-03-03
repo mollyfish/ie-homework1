@@ -3,7 +3,7 @@ var app = express();
 var fs = require('fs');
 var path = require('path');
 var bodyParser = require('body-parser');
-var exec = require('child_process').execFile; 
+var exec = require('child_process').exec; 
 var port = 8080 || process.env.PORT; 
 
 app.use(express.static(__dirname + '/public'));
