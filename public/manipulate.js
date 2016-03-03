@@ -18,7 +18,7 @@ var data = {
 var options = {
     scaleOverride: true,
     scaleSteps: 10,
-    scaleStepWidth: 0.1,
+    scaleStepWidth: 10,
     scaleStartValue: 0,
 };
 var ctx = document.getElementById("myChart").getContext("2d");
@@ -98,4 +98,4 @@ myNewChart.removeData();
 data.labels = ["-60", "-50", "-40", "-30", "-20", "-10", "0"];
 
 });
-}, 2000);
+}, 1000);
