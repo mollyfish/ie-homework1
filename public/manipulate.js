@@ -91,10 +91,11 @@ percentages.shift();
 
 
 
-// myNewChart.addData([prettyPercentage], "0"); 
-data.datasets[0].data = [percentages[0],percentages[1],percentages[2],percentages[3],percentages[4],percentages[5],percentages[6]]; 
+myNewChart.addData([percentages[6]], "0"); 
+// data.datasets[0].data = [percentages[0],percentages[1],percentages[2],percentages[3],percentages[4],percentages[5],percentages[6]]; 
 console.log(data.datasets[0].data);
-// myNewChart.removeData();
+myNewChart.removeData();
+data.labels = ["-60", "-50", "-40", "-30", "-20", "-10", "0"];
 
 });
 }, 2000);
