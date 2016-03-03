@@ -27,8 +27,8 @@ var myNewChart = new Chart(ctx).Line(data, options);
 
 setInterval(function() {
 
-$.get('/cpuinfo', function(data) {
-  cpus = JSON.parse(data);
+$.get('/cpuinfo', function(newData) {
+  cpus = JSON.parse(newData);
   
 var prevCpus = {
         "softirq" : "2607",
