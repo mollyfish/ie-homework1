@@ -15,6 +15,14 @@ var data = {
         }
     ]
 };
+var options = {
+    scaleOverride: true,
+    scaleSteps: 10,
+    scaleStepWidth: 0.1,
+    scaleStartValue: 0,
+};
+var ctx = document.getElementById("myChart").getContext("2d");
+var myNewChart = new Chart(ctx).Line(data, options);
 setInterval(function() {
 
 $.get('/cpuinfo', function(data) {
@@ -78,15 +86,7 @@ percentages.push(prettyPercentage);
 percentages.shift();
 
 //console.log(percentages);
-var options = {
-    scaleOverride: true,
-    scaleSteps: 10,
-    scaleStepWidth: 0.1,
-    scaleStartValue: 0,
-};
 
-var ctx = document.getElementById("myChart").getContext("2d");
-var myNewChart = new Chart(ctx).Line(data, options);
 
 
 
