@@ -12,7 +12,7 @@ app.use(bodyParser());
 
 app.get('/cpuinfo', function(req, res) {
 	console.log('i hear you');
-	exec(path.join(__dirname + '/get-cpu.sh'));
+	exec(path.join(__dirname + '/get-cpu'));
   fs.readFile(path.join(__dirname + '/public/data.json'), function(err, data){
   	console.log("packet");
   	res.send(data);
