@@ -92,4 +92,4 @@ setInterval(function() {
     myNewChart.update();
     prevCpus = cpus;
   });
-}, 4000);
+}, 1000);
