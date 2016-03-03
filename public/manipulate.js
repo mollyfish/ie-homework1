@@ -96,7 +96,7 @@ myNewChart.addData([percentages[6]], "0");
 // console.log(data.datasets[0].data[6]);
 // data.labels = ["-60", "-50", "-40", "-30", "-20", "-10", "0"];
 myNewChart.removeData();
-console.log(myNewChart.data.labels);
+console.log(data.labels);
 // data.labels = ["-60", "-50", "-40", "-30", "-20", "-10", "0"];
 
 });
