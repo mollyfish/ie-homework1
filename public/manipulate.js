@@ -40,8 +40,8 @@ var cpus = {};
 setInterval(function() {
   $.get('/cpuinfo', function(packet) {
     console.log(packet);
-    // cpus = JSON.parse(packet);
-    // console.log(cpus);
+    cpus = JSON.parse(packet);
+    console.log(cpus);
     
     // var prevSoftirq = parseInt(prevCpus.softirq);
     // var prevGuest_nice = parseInt(prevCpus.guest_nice);
