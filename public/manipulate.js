@@ -11,37 +11,36 @@ var prevCpus = {
         "idle" : "21820846",
 };
 var cpus = {};
-var percentages = [0, 0, 0, 0, 0, 0, 0];
-var data = {
-  labels: ["-60", "-50", "-40", "-30", "-20", "-10", "0"],
-  datasets: [{
-      label: "CPU Usage",
-      fillColor: "rgba(107,13,255,0.2)",
-      strokeColor: "rgba(107,13,255,1)",
-      pointColor: "rgba(107,13,255,1)",
-      pointStrokeColor: "#fff",
-      pointHighlightFill: "#fff",
-      pointHighlightStroke: "rgba(107,13,255,1)",
-      // data: []
-      data: [percentages[0],percentages[1],percentages[2],percentages[3],percentages[4],percentages[5],percentages[6]]
-    }]
-};
-var options = {
-    scaleOverride: true,
-    scaleSteps: 10,
-    scaleStepWidth: 10,
-    scaleStartValue: 0,
-};
+// var percentages = [0, 0, 0, 0, 0, 0, 0];
+// var data = {
+//   labels: ["-60", "-50", "-40", "-30", "-20", "-10", "0"],
+//   datasets: [{
+//       label: "CPU Usage",
+//       fillColor: "rgba(107,13,255,0.2)",
+//       strokeColor: "rgba(107,13,255,1)",
+//       pointColor: "rgba(107,13,255,1)",
+//       pointStrokeColor: "#fff",
+//       pointHighlightFill: "#fff",
+//       pointHighlightStroke: "rgba(107,13,255,1)",
+//       data: [percentages[0],percentages[1],percentages[2],percentages[3],percentages[4],percentages[5],percentages[6]]
+//     }]
+// };
+// var options = {
+//     scaleOverride: true,
+//     scaleSteps: 10,
+//     scaleStepWidth: 10,
+//     scaleStartValue: 0,
+// };
 
 
-var ctx = document.getElementById("myChart").getContext("2d");
-var myNewChart = new Chart(ctx).Line(data, options);
+// var ctx = document.getElementById("myChart").getContext("2d");
+// var myNewChart = new Chart(ctx).Line(data, options);
 
 
 setInterval(function() {
   $.get('/cpuinfo', function(newData) {
     console.log(JSON.parse(newData));
-    
+
     cpus = JSON.parse(newData);
     // console.dir(prevCpus);
     
@@ -87,11 +86,11 @@ setInterval(function() {
     percentages.push(prettyPercentage);
     percentages.shift();
 
-    myNewChart.addData([percentages[6]], "0");
-    data.datasets[0].data = [percentages[0],percentages[1],percentages[2],percentages[3],percentages[4],percentages[5],percentages[6]]; 
-    myNewChart.removeData();
-    myNewChart.scale.xLabels = ["-60", "-50", "-40", "-30", "-20", "-10", "0"];
-    myNewChart.update();
+    // myNewChart.addData([percentages[6]], "0");
+    // data.datasets[0].data = [percentages[0],percentages[1],percentages[2],percentages[3],percentages[4],percentages[5],percentages[6]]; 
+    // myNewChart.removeData();
+    // myNewChart.scale.xLabels = ["-60", "-50", "-40", "-30", "-20", "-10", "0"];
+    // myNewChart.update();
     prevCpus = cpus;
   });
 }, 4000);
