@@ -42,7 +42,8 @@ setInterval(function() {
 
 $.get('/cpuinfo', function(newData) {
   cpus = JSON.parse(newData);
-  console.log(cpus);
+  console.dir(cpus);
+  console.dir(prevCpus);
   
 
 var prevSoftirq = parseInt(prevCpus.softirq);
@@ -82,9 +83,12 @@ var idleDiff = trueIdle - prevTrueIdle;
 var rawPercentage = (totalDiff - idleDiff) / totalDiff;
 var prettyPercentage = (rawPercentage*100);
 
-console.log(prettyPercentage);
+// console.log(prettyPercentage);
 
 prevCpus = cpus;
+
+console.dir(cpus);
+console.dir(prevCpus);
 
 percentages.push(prettyPercentage);
 percentages.shift();
@@ -98,15 +102,11 @@ myNewChart.addData([percentages[6]], "0");
 
 data.datasets[0].data = [percentages[0],percentages[1],percentages[2],percentages[3],percentages[4],percentages[5],percentages[6]]; 
 
-// console.log(data.datasets[0].data[6]);
-// data.labels = ["-60", "-50", "-40", "-30", "-20", "-10", "0"];
 
 myNewChart.removeData();
 
 myNewChart.scale.xLabels = ["-60", "-50", "-40", "-30", "-20", "-10", "0"];
 myNewChart.update();
-console.log(data.labels);
-// data.labels = ["-60", "-50", "-40", "-30", "-20", "-10", "0"];
 
 });
-}, 1000);
+}, 4000);
