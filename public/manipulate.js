@@ -91,11 +91,23 @@ percentages.shift();
 
 
 
-myNewChart.addData([percentages[6]], "0"); 
+// myNewChart.addData([percentages[6]], "0");
+
+myNewChart.datasets[0].points[6].value = percentages[6];
+myNewChart.datasets[0].points[6].value = percentages[5];
+myNewChart.datasets[0].points[6].value = percentages[4];
+myNewChart.datasets[0].points[6].value = percentages[3];
+myNewChart.datasets[0].points[6].value = percentages[2];
+myNewChart.datasets[0].points[6].value = percentages[1];
+myNewChart.datasets[0].points[6].value = percentages[0];
+
+  
+  myLiveChart.update();
+
 // data.datasets[0].data = [percentages[0],percentages[1],percentages[2],percentages[3],percentages[4],percentages[5],percentages[6]]; 
 // console.log(data.datasets[0].data[6]);
 // data.labels = ["-60", "-50", "-40", "-30", "-20", "-10", "0"];
-myNewChart.removeData();
+// myNewChart.removeData();
 console.log(data.labels);
 // data.labels = ["-60", "-50", "-40", "-30", "-20", "-10", "0"];
 
