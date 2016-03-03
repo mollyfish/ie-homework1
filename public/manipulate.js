@@ -93,13 +93,13 @@ percentages.shift();
 
 // myNewChart.addData([percentages[6]], "0");
 
-myNewChart.datasets[0].points[6].value = percentages[6];
-myNewChart.datasets[0].points[6].value = percentages[5];
-myNewChart.datasets[0].points[6].value = percentages[4];
-myNewChart.datasets[0].points[6].value = percentages[3];
-myNewChart.datasets[0].points[6].value = percentages[2];
-myNewChart.datasets[0].points[6].value = percentages[1];
-myNewChart.datasets[0].points[6].value = percentages[0];
+data.datasets[0].data[6].value = percentages[6];
+data.datasets[0].data[6].value = percentages[5];
+data.datasets[0].data[6].value = percentages[4];
+data.datasets[0].data[6].value = percentages[3];
+data.datasets[0].data[6].value = percentages[2];
+data.datasets[0].data[6].value = percentages[1];
+data.datasets[0].data[6].value = percentages[0];
 
   
   myNewChart.update();
