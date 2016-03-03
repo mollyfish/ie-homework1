@@ -1,0 +1,3 @@
+#!/bin/bash
+
+nodejs json-parser.js > public/data.json
