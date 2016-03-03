@@ -38,9 +38,9 @@ var cpus = {};
 
 
 setInterval(function() {
-  $.get('/cpuinfo', function(newData) {
-    console.log(newData);
-    // cpus = JSON.parse(newData);
+  $.get('/cpuinfo', function(packet) {
+    console.log(packet);
+    // cpus = JSON.parse(packet);
     // console.log(cpus);
     
     // var prevSoftirq = parseInt(prevCpus.softirq);
