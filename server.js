@@ -14,9 +14,9 @@ app.get('/cpuinfo', function(req, res) {
 	child_process.exec(path.join(__dirname + '/get-cpu.sh'));
   fs.readFile(path.join(__dirname + '/public/data.json'), function(err, newData){
   	console.log("packet");
-  	res.send(newData)
+  	res.send(newData);
+  	child_process.exec(path.join(__dirname + '/delete-json.sh'));
   });
-  // child_process.exec(path.join(__dirname + '/delete-json.sh'));
 });
 
 app.listen(port, function() { 
