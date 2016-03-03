@@ -1,3 +1,16 @@
+var prevCpus = {
+        "softirq" : "2607",
+        "guest_nice" : "0",
+        "user" : "10411",
+        "guest" : "0",
+        "steal" : "0",
+        "system" : "71126",
+        "nice" : "22076",
+        "irq" : "3",
+        "iowait" : "121714",
+        "idle" : "21820846",
+};
+var cpus = {};
 var percentages = [0, 0, 0, 0, 0, 0, 0];
 var data = {
     labels: ["-60", "-50", "-40", "-30", "-20", "-10", "0"],
@@ -29,19 +42,8 @@ setInterval(function() {
 
 $.get('/cpuinfo', function(newData) {
   cpus = JSON.parse(newData);
+  console.log(cpus);
   
-var prevCpus = {
-        "softirq" : "2607",
-        "guest_nice" : "0",
-        "user" : "10411",
-        "guest" : "0",
-        "steal" : "0",
-        "system" : "71126",
-        "nice" : "22076",
-        "irq" : "3",
-        "iowait" : "121714",
-        "idle" : "21820846",
-};
 
 var prevSoftirq = parseInt(prevCpus.softirq);
 var prevGuest_nice = parseInt(prevCpus.guest_nice);
