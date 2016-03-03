@@ -93,8 +93,9 @@ percentages.shift();
 
 myNewChart.addData([percentages[6]], "0"); 
 // data.datasets[0].data = [percentages[0],percentages[1],percentages[2],percentages[3],percentages[4],percentages[5],percentages[6]]; 
-console.log(data.datasets[0].data[6]);
+// console.log(data.datasets[0].data[6]);
 myNewChart.removeData();
+console.log(data.labels);
 data.labels = ["-60", "-50", "-40", "-30", "-20", "-10", "0"];
 
 });
