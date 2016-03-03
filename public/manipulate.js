@@ -40,45 +40,45 @@ var cpus = {};
 setInterval(function() {
   $.get('/cpuinfo', function(newData) {
     console.log(newData);
-    cpus = JSON.parse(newData);
+    // cpus = JSON.parse(newData);
     // console.log(cpus);
     
-    var prevSoftirq = parseInt(prevCpus.softirq);
-    var prevGuest_nice = parseInt(prevCpus.guest_nice);
-    var prevUser = parseInt(prevCpus.user);
-    var prevGuest = parseInt(prevCpus.guest);
-    var prevSteal = parseInt(prevCpus.steal);
-    var prevSystem = parseInt(prevCpus.system);
-    var prevNice = parseInt(prevCpus.nice);
-    var prevIrq = parseInt(prevCpus.irq);
-    var prevIowait = parseInt(prevCpus.iowait);
-    var prevIdle = parseInt(prevCpus.idle);
+    // var prevSoftirq = parseInt(prevCpus.softirq);
+    // var prevGuest_nice = parseInt(prevCpus.guest_nice);
+    // var prevUser = parseInt(prevCpus.user);
+    // var prevGuest = parseInt(prevCpus.guest);
+    // var prevSteal = parseInt(prevCpus.steal);
+    // var prevSystem = parseInt(prevCpus.system);
+    // var prevNice = parseInt(prevCpus.nice);
+    // var prevIrq = parseInt(prevCpus.irq);
+    // var prevIowait = parseInt(prevCpus.iowait);
+    // var prevIdle = parseInt(prevCpus.idle);
 
-    var softirq = parseInt(cpus.softirq);
-    var guest_nice = parseInt(cpus.guest_nice);
-    var user = parseInt(cpus.user);
-    var guest = parseInt(cpus.guest);
-    var steal = parseInt(cpus.steal);
-    var system = parseInt(cpus.system);
-    var nice = parseInt(cpus.nice);
-    var irq = parseInt(cpus.irq);
-    var iowait = parseInt(cpus.iowait);
-    var idle = parseInt(cpus.idle);
+    // var softirq = parseInt(cpus.softirq);
+    // var guest_nice = parseInt(cpus.guest_nice);
+    // var user = parseInt(cpus.user);
+    // var guest = parseInt(cpus.guest);
+    // var steal = parseInt(cpus.steal);
+    // var system = parseInt(cpus.system);
+    // var nice = parseInt(cpus.nice);
+    // var irq = parseInt(cpus.irq);
+    // var iowait = parseInt(cpus.iowait);
+    // var idle = parseInt(cpus.idle);
 
-    var trueIdle = idle + iowait;
-    var prevTrueIdle = prevIdle + prevIowait;
+    // var trueIdle = idle + iowait;
+    // var prevTrueIdle = prevIdle + prevIowait;
 
-    var nonIdle = user + nice + system + irq + softirq + steal;
-    var prevNonIdle = prevUser + prevNice + prevSystem + prevIrq + prevSoftirq + prevSteal
+    // var nonIdle = user + nice + system + irq + softirq + steal;
+    // var prevNonIdle = prevUser + prevNice + prevSystem + prevIrq + prevSoftirq + prevSteal
 
-    var total = trueIdle + nonIdle;
-    var prevTotal = prevTrueIdle + prevNonIdle;
+    // var total = trueIdle + nonIdle;
+    // var prevTotal = prevTrueIdle + prevNonIdle;
 
-    var totalDiff = total - prevTotal;
-    var idleDiff = trueIdle - prevTrueIdle;
+    // var totalDiff = total - prevTotal;
+    // var idleDiff = trueIdle - prevTrueIdle;
 
-    var rawPercentage = (totalDiff - idleDiff) / totalDiff;
-    var prettyPercentage = (rawPercentage*100);
+    // var rawPercentage = (totalDiff - idleDiff) / totalDiff;
+    // var prettyPercentage = (rawPercentage*100);
 
     // console.log(prettyPercentage);
 
@@ -90,6 +90,6 @@ setInterval(function() {
     // myNewChart.removeData();
     // myNewChart.scale.xLabels = ["-60", "-50", "-40", "-30", "-20", "-10", "0"];
     // myNewChart.update();
-    prevCpus = cpus;
+    // prevCpus = cpus;
   });
 }, 4000);
