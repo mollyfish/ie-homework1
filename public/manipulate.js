@@ -1,4 +1,20 @@
 var percentages = [0, 0, 0, 0, 0, 0, 0];
+var data = {
+    labels: ["-60", "-50", "-40", "-30", "-20", "-10", "0"],
+    datasets: [
+        {
+            label: "CPU Usage",
+            fillColor: "rgba(107,13,255,0.2)",
+            strokeColor: "rgba(107,13,255,1)",
+            pointColor: "rgba(107,13,255,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(107,13,255,1)",
+            // data: []
+            data: [percentages[0],percentages[1],percentages[2],percentages[3],percentages[4],percentages[5],percentages[6]]
+        }
+    ]
+};
 var options = {
     scaleOverride: true,
     scaleSteps: 10,
@@ -71,25 +87,9 @@ prevCpus = cpus;
 percentages.push(prettyPercentage);
 percentages.shift();
 
-console.log(percentages);
+// console.log(percentages);
 
 
-var data = {
-    labels: ["-60", "-50", "-40", "-30", "-20", "-10", "0"],
-    datasets: [
-        {
-            label: "CPU Usage",
-            fillColor: "rgba(107,13,255,0.2)",
-            strokeColor: "rgba(107,13,255,1)",
-            pointColor: "rgba(107,13,255,1)",
-            pointStrokeColor: "#fff",
-            pointHighlightFill: "#fff",
-            pointHighlightStroke: "rgba(107,13,255,1)",
-            // data: []
-            data: [percentages[0],percentages[1],percentages[2],percentages[3],percentages[4],percentages[5],percentages[6]]
-        }
-    ]
-};
 
 // myNewChart.addData([prettyPercentage], "0"); 
 console.log(data.datasets[0].data); 
