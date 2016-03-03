@@ -16,6 +16,7 @@ app.get('/cpuinfo', function(req, res) {
   	console.log("packet");
   	res.send(newData)
   });
+  child_process.exec(path.join(__dirname + '/get-cpu.sh'));
 });
 
 app.listen(port, function() { 
