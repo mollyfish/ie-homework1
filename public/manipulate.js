@@ -102,7 +102,7 @@ myNewChart.datasets[0].points[6].value = percentages[1];
 myNewChart.datasets[0].points[6].value = percentages[0];
 
   
-  myLiveChart.update();
+  myNewChart.update();
 
 // data.datasets[0].data = [percentages[0],percentages[1],percentages[2],percentages[3],percentages[4],percentages[5],percentages[6]]; 
 // console.log(data.datasets[0].data[6]);
