@@ -1,4 +1,4 @@
-var percentages = [0, 0, 0, 0, 0, 0, 0];
+// var percentages = [0, 0, 0, 0, 0, 0, 0];
 var data = {
     labels: ["-60", "-50", "-40", "-30", "-20", "-10", "0"],
     datasets: [
@@ -10,8 +10,8 @@ var data = {
             pointStrokeColor: "#fff",
             pointHighlightFill: "#fff",
             pointHighlightStroke: "rgba(107,13,255,1)",
-//            data: []
-            data: [percentages[0],percentages[1],percentages[2],percentages[3],percentages[4],percentages[5],percentages[6]]
+            data: []
+            // data: [percentages[0],percentages[1],percentages[2],percentages[3],percentages[4],percentages[5],percentages[6]]
         }
     ]
 };
@@ -23,6 +23,8 @@ var options = {
 };
 var ctx = document.getElementById("myChart").getContext("2d");
 var myNewChart = new Chart(ctx).Line(data, options);
+
+
 setInterval(function() {
 
 $.get('/cpuinfo', function(data) {
@@ -82,17 +84,17 @@ console.log(prettyPercentage);
 
 prevCpus = cpus;
 
-percentages.push(prettyPercentage);
-percentages.shift();
+// percentages.push(prettyPercentage);
+// percentages.shift();
 
 //console.log(percentages);
 
 
 
 
-//  myNewChart.addData([prettyPercentage], "0"); 
-  //console.log(data.datasets[0].data); 
-   // myNewChart.removeData();
+ myNewChart.addData([prettyPercentage], "0"); 
+  console.log(data.datasets[0].data); 
+   myNewChart.removeData();
 
 });
 }, 2000);
